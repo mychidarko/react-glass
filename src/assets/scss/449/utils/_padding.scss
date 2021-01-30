@@ -1,0 +1,191 @@
+@each $class, $padding in $sizes {
+  .p\:#{$class} {
+    padding: $padding !important;
+  }
+
+  .px\:#{$class} {
+    padding-left: $padding !important;
+    padding-right: $padding !important;
+  }
+
+  .py\:#{$class} {
+    padding-top: $padding !important;
+    padding-bottom: $padding !important;
+  }
+
+  .pt\:#{$class} {
+    padding-top: $padding !important;
+  }
+
+  .pb\:#{$class} {
+    padding-bottom: $padding !important;
+  }
+
+  .pl\:#{$class} {
+    padding-left: $padding !important;
+  }
+
+  .pr\:#{$class} {
+    padding-right: $padding !important;
+  }
+
+  @include xs {
+	.p-xs\:#{$class} {
+		padding: $padding !important;
+	}
+
+	.px-xs\:#{$class} {
+		padding-left: $padding !important;
+		padding-right: $padding !important;
+	}
+
+	.py-xs\:#{$class} {
+		padding-top: $padding !important;
+		padding-bottom: $padding !important;
+	}
+
+	.pt-xs\:#{$class} {
+		padding-top: $padding !important;
+	}
+
+	.pb-xs\:#{$class} {
+		padding-bottom: $padding !important;
+	}
+
+	.pl-xs\:#{$class} {
+		padding-left: $padding !important;
+	}
+
+	.pr-xs\:#{$class} {
+		padding-right: $padding !important;
+	}
+  }
+
+  @include sm {
+	.p-sm\:#{$class} {
+		padding: $padding !important;
+	}
+
+	.px-sm\:#{$class} {
+		padding-left: $padding !important;
+		padding-right: $padding !important;
+	}
+
+	.py-sm\:#{$class} {
+		padding-top: $padding !important;
+		padding-bottom: $padding !important;
+	}
+
+	.pt-sm\:#{$class} {
+		padding-top: $padding !important;
+	}
+
+	.pb-sm\:#{$class} {
+		padding-bottom: $padding !important;
+	}
+
+	.pl-sm\:#{$class} {
+		padding-left: $padding !important;
+	}
+
+	.pr-sm\:#{$class} {
+		padding-right: $padding !important;
+	}
+  }
+
+  @include md {
+	.p-md\:#{$class} {
+		padding: $padding !important;
+	}
+
+	.px-md\:#{$class} {
+		padding-left: $padding !important;
+		padding-right: $padding !important;
+	}
+
+	.py-md\:#{$class} {
+		padding-top: $padding !important;
+		padding-bottom: $padding !important;
+	}
+
+	.pt-md\:#{$class} {
+		padding-top: $padding !important;
+	}
+
+	.pb-md\:#{$class} {
+		padding-bottom: $padding !important;
+	}
+
+	.pl-md\:#{$class} {
+		padding-left: $padding !important;
+	}
+
+	.pr-md\:#{$class} {
+		padding-right: $padding !important;
+	}
+  }
+
+  @include lg {
+	.p-lg\:#{$class} {
+		padding: $padding !important;
+	}
+
+	.px-lg\:#{$class} {
+		padding-left: $padding !important;
+		padding-right: $padding !important;
+	}
+
+	.py-lg\:#{$class} {
+		padding-top: $padding !important;
+		padding-bottom: $padding !important;
+	}
+
+	.pt-lg\:#{$class} {
+		padding-top: $padding !important;
+	}
+
+	.pb-lg\:#{$class} {
+		padding-bottom: $padding !important;
+	}
+
+	.pl-lg\:#{$class} {
+		padding-left: $padding !important;
+	}
+
+	.pr-lg\:#{$class} {
+		padding-right: $padding !important;
+	}
+  }
+
+  @include xl {
+	.p-xl\:#{$class} {
+		padding: $padding !important;
+	}
+
+	.px-xl\:#{$class} {
+		padding-left: $padding !important;
+		padding-right: $padding !important;
+	}
+
+	.py-xl\:#{$class} {
+		padding-top: $padding !important;
+		padding-bottom: $padding !important;
+	}
+
+	.pt-xl\:#{$class} {
+		padding-top: $padding !important;
+	}
+
+	.pb-xl\:#{$class} {
+		padding-bottom: $padding !important;
+	}
+
+	.pl-xl\:#{$class} {
+		padding-left: $padding !important;
+	}
+
+	.pr-xl\:#{$class} {
+		padding-right: $padding !important;
+	}
+  }
+}

@@ -1,0 +1,5 @@
+@each $cursor in $cursors {
+	.cursor\:#{$cursor} {
+		cursor: $cursor !important;
+	}
+}

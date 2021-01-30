@@ -1,0 +1,191 @@
+@each $class, $margin in $sizes {
+  .m\:#{$class} {
+    margin: $margin !important;
+  }
+
+  .mx\:#{$class} {
+    margin-left: $margin !important;
+    margin-right: $margin !important;
+  }
+
+  .my\:#{$class} {
+    margin-top: $margin !important;
+    margin-bottom: $margin !important;
+  }
+
+  .mt\:#{$class} {
+    margin-top: $margin !important;
+  }
+
+  .mb\:#{$class} {
+    margin-bottom: $margin !important;
+  }
+
+  .ml\:#{$class} {
+    margin-left: $margin !important;
+  }
+
+  .mr\:#{$class} {
+    margin-right: $margin !important;
+  }
+
+  @include xs {
+	.m-xs\:#{$class} {
+		margin: $margin !important;
+	}
+
+	.mx-xs\:#{$class} {
+		margin-left: $margin !important;
+		margin-right: $margin !important;
+	}
+
+	.my-xs\:#{$class} {
+		margin-top: $margin !important;
+		margin-bottom: $margin !important;
+	}
+
+	.mt-xs\:#{$class} {
+		margin-top: $margin !important;
+	}
+
+	.mb-xs\:#{$class} {
+		margin-bottom: $margin !important;
+	}
+
+	.ml-xs\:#{$class} {
+		margin-left: $margin !important;
+	}
+
+	.mr-xs\:#{$class} {
+		margin-right: $margin !important;
+	}
+  }
+
+  @include sm {
+	.m-sm\:#{$class} {
+		margin: $margin !important;
+	}
+
+	.mx-sm\:#{$class} {
+		margin-left: $margin !important;
+		margin-right: $margin !important;
+	}
+
+	.my-sm\:#{$class} {
+		margin-top: $margin !important;
+		margin-bottom: $margin !important;
+	}
+
+	.mt-sm\:#{$class} {
+		margin-top: $margin !important;
+	}
+
+	.mb-sm\:#{$class} {
+		margin-bottom: $margin !important;
+	}
+
+	.ml-sm\:#{$class} {
+		margin-left: $margin !important;
+	}
+
+	.mr-sm\:#{$class} {
+		margin-right: $margin !important;
+	}
+  }
+
+  @include md {
+	.m-md\:#{$class} {
+		margin: $margin !important;
+	}
+
+	.mx-md\:#{$class} {
+		margin-left: $margin !important;
+		margin-right: $margin !important;
+	}
+
+	.my-md\:#{$class} {
+		margin-top: $margin !important;
+		margin-bottom: $margin !important;
+	}
+
+	.mt-md\:#{$class} {
+		margin-top: $margin !important;
+	}
+
+	.mb-md\:#{$class} {
+		margin-bottom: $margin !important;
+	}
+
+	.ml-md\:#{$class} {
+		margin-left: $margin !important;
+	}
+
+	.mr-md\:#{$class} {
+		margin-right: $margin !important;
+	}
+  }
+
+  @include lg {
+	.m-lg\:#{$class} {
+		margin: $margin !important;
+	}
+
+	.mx-lg\:#{$class} {
+		margin-left: $margin !important;
+		margin-right: $margin !important;
+	}
+
+	.my-lg\:#{$class} {
+		margin-top: $margin !important;
+		margin-bottom: $margin !important;
+	}
+
+	.mt-lg\:#{$class} {
+		margin-top: $margin !important;
+	}
+
+	.mb-lg\:#{$class} {
+		margin-bottom: $margin !important;
+	}
+
+	.ml-lg\:#{$class} {
+		margin-left: $margin !important;
+	}
+
+	.mr-lg\:#{$class} {
+		margin-right: $margin !important;
+	}
+  }
+
+  @include xl {
+	.m-xl\:#{$class} {
+		margin: $margin !important;
+	}
+
+	.mx-xl\:#{$class} {
+		margin-left: $margin !important;
+		margin-right: $margin !important;
+	}
+
+	.my-xl\:#{$class} {
+		margin-top: $margin !important;
+		margin-bottom: $margin !important;
+	}
+
+	.mt-xl\:#{$class} {
+		margin-top: $margin !important;
+	}
+
+	.mb-xl\:#{$class} {
+		margin-bottom: $margin !important;
+	}
+
+	.ml-xl\:#{$class} {
+		margin-left: $margin !important;
+	}
+
+	.mr-xl\:#{$class} {
+		margin-right: $margin !important;
+	}
+  }
+}

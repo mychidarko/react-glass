@@ -1,0 +1,3 @@
+# Assets
+
+Your assets go in here. These include your styling, images, translations...
