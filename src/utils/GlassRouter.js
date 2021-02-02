@@ -14,7 +14,8 @@ export default class GlassRouter {
         scrollBehavior: (savedPosition) => {
             const {x, y} = savedPosition;
             ScrollTo(x, y);
-        }
+        },
+        beforeEach: null,
     };
 
     _options = {};
@@ -26,6 +27,9 @@ export default class GlassRouter {
         };
     }
 
+    /**
+     * Generate JSX from defined routes
+     */
     exportRoutes() {
         const { routes } = this._options;
         return (
@@ -50,9 +54,17 @@ export default class GlassRouter {
                 </Switch>
             </Router>
         );
-
-        // routes.forEach((route) => {
-        //     // 
-        // });
     }
+
+    /**
+     * Define middleware
+     */
+    beforeEach(cb) {
+        this.beforeEach = cb;
+    }
+
+    /**
+     * Navigate to a specific month
+     */
+    push(options) {}
 }
