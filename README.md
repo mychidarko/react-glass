@@ -1,6 +1,6 @@
 # React Glass
 
-React glass is a
+React Glass is a simple react js boilerplate which focuses on providing a simple and pain-free developer experience.
 
 ## Features
 
