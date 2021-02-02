@@ -18,7 +18,8 @@ export default function Home() {
           {initial}
           React Glass is a simple react js boilerplate which focuses on providing a simple and pain-free
           developer experience. React Glass uses items like named routes, simple state management instead of
-          overblown libraries like redux. With React Glass, the simpler, the better.
+          overblown libraries like redux and unfriendly interfaces like react-router-dom.
+          With React Glass, the simpler, the better.
         </p>
       </div>
     </div>

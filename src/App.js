@@ -3,12 +3,12 @@ import { ErrorBoundary } from "./utils";
 
 import "./store";
 
-function App() {
-  return (
-    <ErrorBoundary>
-      {router.exportRoutes()}
-    </ErrorBoundary>
-  );
-}
+const App = () => (
+  <ErrorBoundary>
+    <Routes />
+  </ErrorBoundary>
+);
+
+const Routes = () => router.render();
 
 export default App;

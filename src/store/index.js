@@ -1,10 +1,11 @@
 import GlassX from "./GlassX";
 
-// import state modules
+// import store modules
 import home from "./../views/Home/store";
+import login from "./../views/Login/store";
 
 const store = new GlassX({
-	modules: [home],
+	modules: [home, login],
 });
 
 export default store;

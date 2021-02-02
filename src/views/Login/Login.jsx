@@ -28,7 +28,7 @@ export default function Home() {
 				...errors,
 				[item]: `Please enter a ${item}`,
 			});
-			
+
 			isValid = false;
 		}
 

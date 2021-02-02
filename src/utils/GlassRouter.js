@@ -30,7 +30,7 @@ export default class GlassRouter {
     /**
      * Generate JSX from defined routes
      */
-    exportRoutes() {
+    render() {
         const { routes } = this._options;
         return (
             <Router>

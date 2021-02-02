@@ -1,9 +1,9 @@
 import axios from "axios";
 
-import { API_URL } from "./../config/constants";
+import { API_URL } from "../config/constants";
 import { hasAuth, getToken, save } from "./User";
 
-const SpyderErrors = {
+const GlassErrors = {
 	offline: "No network detected! This feature requires an internet connection!",
 };
 
@@ -30,7 +30,7 @@ export function $request(data) {
 
 	return new Promise(async (resolve, reject) => {
 		if (!window.navigator.onLine) {
-			return reject(SpyderErrors.offline);
+			return reject(GlassErrors.offline);
 		}
 
 		try {
