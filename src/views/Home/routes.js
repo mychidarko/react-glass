@@ -1,12 +1,11 @@
-import { Switch, Route } from "react-router-dom";
+import Home from "./Home";
 
-import HomePage from "./Home";
-import { namedRoutes } from "./../../routes";
-
-export default function Home() {
-  return (
-    <Switch>
-      <Route exact path={namedRoutes.home.index} component={HomePage} />
-    </Switch>
-  );
-}
+// eslint-disable-next-line import/no-anonymous-default-export
+export default [
+  {
+    path: "/",
+    exact: true,
+    component: Home,
+    name: "home",
+  },
+];

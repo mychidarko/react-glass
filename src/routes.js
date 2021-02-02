@@ -1,36 +1,30 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import GlassRouter from "./utils/GlassRouter";
 
-import Home from "./views/Home/routes";
-import ScrollToTop from "./utils/ScrollToTop";
+import home from "./views/Home/routes";
+import login from "./views/Login/routes";
 
-export default function Routes() {
-  return (
-    <Router>
-      <ScrollToTop />
-      <Switch>
-        <Route exact path="/" component={Home} />
-        <Route path="*" render={() => <h2>404: Page Not Found!</h2>} />
-      </Switch>
-    </Router>
-  );
-}
+const routes = [
+  ...home,
+  ...login,
+];
 
-/**
- * namedRoutes
- *
- * Sometimes it is very import to name your routes if there's
- * a possibility of the routes changing often.
- *
- * This ensures that you have your routes defined at a central
- * place where you can update and have it reflect everywhere it
- * is used
- *
- * Usage
- *
- * import {namedRoutes} from "../routes";
- *
- * namedRoutes.home.index
- * namedRoutes.settings.profile
- * ....
- */
-export const namedRoutes = { home: { index: "/" } };
+const router = new GlassRouter({
+  base: "/",
+  routes,
+});
+
+router.beforeEach((to, from, next) => {
+	const { middleware } = to.meta;
+
+	if (!middleware) return next();
+
+	const context = {
+		to, from, next,
+	};
+
+	return middleware[0]({
+		...context,
+	});
+});
+
+export default router;

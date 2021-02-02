@@ -1,4 +1,4 @@
-import Routes from "./routes";
+import router from "./routes";
 import { ErrorBoundary } from "./utils";
 
 import "./store";
@@ -6,7 +6,7 @@ import "./store";
 function App() {
   return (
     <ErrorBoundary>
-      <Routes />
+      {router.exportRoutes()}
     </ErrorBoundary>
   );
 }
