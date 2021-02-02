@@ -19,6 +19,8 @@
 .env.production.local
 .eslintcache
 
+lib/
+
 yarn.lock
 package-lock.json
 

@@ -5,8 +5,6 @@ import App from './App';
 import reportWebVitals from "./config/reportWebVitals";
 import * as serviceWorker from "./config/serviceWorker";
 
-import "./store"
-
 ReactDOM.render(
   <React.StrictMode>
     <App />

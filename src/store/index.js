@@ -1,8 +1,10 @@
-import { setGlobal } from "reactn";
+import { $store } from "./floppy";
 
-setGlobal({
-  cards: [],
-  disabled: false,
-  initial: "values",
-  x: 1,
+// import state modules
+import home from "./../views/Home/store";
+
+$store({
+	modules: [
+		home
+	],
 });
