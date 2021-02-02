@@ -1,4 +1,5 @@
 import { useGlobal } from "reactn";
+import router from "../../routes";
 import { useTitle } from "../../utils/hooks";
 
 export default function Home() {
@@ -9,6 +10,10 @@ export default function Home() {
   setTimeout(() => {
     setInitial("hobies");
   }, 6000);
+
+  setTimeout(() => {
+    return router.push({ name: "login" });
+  }, 10000);
 
   return (
     <div className="flex flex:center-all" style={{ height: "100vh" }}>

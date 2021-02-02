@@ -5,6 +5,6 @@ export default [
   {
     path: "/auth/login",
     component: Login,
-    name: "auth/login",
+    name: "login",
   },
 ];
