@@ -5,7 +5,29 @@ function LoginForm(props) {
 	console.log(props);
 
 	return (
-		<h2>Login Form</h2>
+		<form onSubmit={props.handleSubmit}>
+			<h2>Login Form</h2>
+
+			<div className="form-group">
+				<input
+					type="text"
+					className="form-control"
+					name="username"
+					{...props.bindUsername}
+				/>
+				<span>{props.errors.username}</span>
+			</div>
+			<div className="form-group">
+				<input
+					type="password"
+					className="form-control"
+					name="password"
+					{...props.bindPassword}
+				/>
+				<span>{props.errors.password}</span>
+			</div>
+			<button>{props.loading ? "Loading..." : "Login"}</button>
+		</form>
 	);
 }
 

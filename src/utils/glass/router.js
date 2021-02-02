@@ -144,14 +144,63 @@ export default class GlassRouter {
     }
 
     /**
-     * Navigate to a specific month
+     * Get the number of entries in the history stack
      */
-    push(options) {
+    entries() {
+        return this.history.length;
+    }
+
+    /**
+     * Get the The current action (PUSH, REPLACE, or POP)
+     */
+    action() {
+        return this.history.action;
+    }
+
+    /**
+     * Navigate to a specific path
+     */
+    push(options, state = null) {
         const path = this.getRoutePath(options);
 
-        console.log("path", path);
+        return this.history.push(path, state);
+    }
 
-        return this.history.push(path);
+    /**
+     * Replaces the current entry on the history stack
+     */
+    replace(options, state = null) {
+        const path = this.getRoutePath(options);
+
+        return this.history.replace(path, state);
+    }
+
+    /**
+     * Moves the pointer in the history stack by n entries
+     */
+    go(n) {
+        return this.history.go(n);
+    }
+
+    /**
+     * Go back
+     */
+    back() {
+        return this.history.go(-1);
+    }
+
+    /**
+     * Go forward
+     */
+    forward() {
+        return this.history.go(1);
+    }
+
+    /**
+     * Go back
+     */
+    disable(prompt) {
+        return this.history.block(prompt);
     }
 
     history() {
