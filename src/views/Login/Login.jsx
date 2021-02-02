@@ -34,18 +34,13 @@ function LoginForm(props) {
 export default function Home() {
 	useTitle("Login");
 
-	const { value: username, bind: bindUsername, reset: resetUsername } = useInput("");
-	const { value: password, bind: bindPassword, reset: resetPassword } = useInput("");
-
 	const [errors, setErrors] = useState({ username: "", password: "" });
 	const [loading, setLoading] = useState(false);
 
-	const validation = (item) => {
-		const items = { username, password };
-		const field = items[item];
+	const validation = (item, value = null) => {
 		let isValid = true;
 
-		if (field.length === 0) {
+		if (value.length === 0) {
 			setErrors({
 				...errors,
 				[item]: `Please enter a ${item}`,
@@ -54,8 +49,18 @@ export default function Home() {
 			isValid = false;
 		}
 
+		if (isValid) {
+			setErrors({
+				...errors,
+				[item]: "",
+			});
+		}
+
 		return isValid;
 	}
+
+	const { value: username, bind: bindUsername, reset: resetUsername } = useInput("", validation);
+	const { value: password, bind: bindPassword, reset: resetPassword } = useInput("", validation);
 
 	const handleSubmit = (e) => {
 		e.preventDefault();

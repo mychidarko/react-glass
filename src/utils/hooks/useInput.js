@@ -1,6 +1,6 @@
 import { useState } from "react";
 
-const useInput = (initialValue) => {
+const useInput = (initialValue, validation = null) => {
     const [value, setValue] = useState(initialValue);
 
     return {
@@ -10,6 +10,7 @@ const useInput = (initialValue) => {
         bind: {
             value,
             onChange: (event) => {
+                if (validation) validation(event.target.name, event.target.value);
                 setValue(event.target.value);
             },
         },
