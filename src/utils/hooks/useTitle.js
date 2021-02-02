@@ -1,5 +1,5 @@
 import { useEffect } from "react";
-import { APP_TITLE } from "./../config/constants";
+import { APP_TITLE } from "./../../config/constants";
 
 const useTitle = (title) => {
   useEffect(() => {
