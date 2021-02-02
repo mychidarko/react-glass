@@ -1,10 +1,10 @@
-import { $store } from "./floppy";
+import GlassX from "./GlassX";
 
 // import state modules
 import home from "./../views/Home/store";
 
-$store({
-	modules: [
-		home
-	],
+const store = new GlassX({
+	modules: [home],
 });
+
+export default store;
