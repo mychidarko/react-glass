@@ -1,4 +1,4 @@
-import GlassX from "./GlassX";
+import GlassX from "../utils/glass/store";
 
 // import store modules
 import home from "./../views/Home/store";

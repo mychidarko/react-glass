@@ -1,5 +1,5 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import ScrollTo from "./ScrollTo";
+import ScrollTo from "../ScrollTo";
 
 /**
  * Easy peasy routing for react. Based on vue router.

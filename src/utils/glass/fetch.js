@@ -1,7 +1,7 @@
 import axios from "axios";
 
-import { API_URL } from "../config/constants";
-import { hasAuth, getToken, save } from "./User";
+import { API_URL } from "../../config/constants";
+import { hasAuth, getToken, save } from "../User";
 
 const GlassErrors = {
 	offline: "No network detected! This feature requires an internet connection!",

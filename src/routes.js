@@ -1,4 +1,4 @@
-import GlassRouter from "./utils/GlassRouter";
+import GlassRouter from "./utils/glass/router";
 
 import home from "./views/Home/routes";
 import login from "./views/Login/routes";
