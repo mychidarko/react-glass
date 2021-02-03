@@ -29,6 +29,10 @@ export default class GlassRouter {
     history = null;
 
     constructor(options) {
+        if (Array.isArray(options)) {
+            options = { routes: options };
+        }
+
         this._options = {
             ...this._defaultOptions,
             ...options,

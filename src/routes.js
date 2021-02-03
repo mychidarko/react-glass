@@ -12,10 +12,7 @@ const routes = [
 	},
 ];
 
-const router = new GlassRouter({
-	base: "/",
-	routes,
-});
+const router = new GlassRouter({ routes });
 
 router.beforeEach((to, from, next) => {
 	const { middleware } = to.meta;
