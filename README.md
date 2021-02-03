@@ -8,7 +8,7 @@ React Glass is a simple react js boilerplate which focuses on providing a simple
 
 Although react docs say you can arrange your project in any way that feels convenient to you, there are a couple of techniques that you can emplore in your directory structure that makes scaling/working on your projects much easier. Some of these have been done by default here. Just download and you're good to go.
 
-### Glass Router
+### Glass Router (GlassRX)
 
 Glass router is a wrapper around `react-router-dom` which provides a clean and developer friendly syntax and usage for your apps.
 
@@ -34,12 +34,12 @@ Route with `exact` prop
 import Home from "./Home"
 
 export default [
-    {
-        path: "/",
-        exact: true,
-        component: Home,
-        name: "home",
-    },
+  {
+    path: "/",
+    exact: true,
+    component: Home,
+    name: "home",
+  },
 ];
 ```
 
@@ -47,12 +47,43 @@ Route with `render` instead of `component`.
 
 ```js
 {
-    path: "*",
-    render: () => <h2>Page Not Found</h2>,
+  path: "*",
+  render: () => <h2>Page Not Found</h2>,
 },
 ```
 
-**More features like middleware and router.push are still being developed. Check this page for updates.**
+#### Routing with glass router
+
+The initialized router is exported from `routes.js` in the src directory. All routing operations can be performed on the router variable no matter the component type you're using.
+
+Just as said above, the Glass Router (GlassRX) uses a syntax fairly the same as vue-router's syntax. As such, you can simply import the router object and call the `push` method.
+
+```js
+import router from "../../routes";
+
+return router.push("/auth/login");
+```
+
+Just like vue-router, you can navigate to a route by passing an object instead like this:
+
+```js
+return router.push({ name: "login" });
+```
+
+The name here is the name given to the route when the route was defined:
+
+```js
+{
+  path: "/",
+  exact: true,
+  component: Home,
+  name: "home",
+},
+```
+
+Routing with the route name is a good practice, as it prevents repition and easily allows you to change the route path and not break your app in any way.
+
+**More features like middleware are still being developed. Check this page for updates.**
 
 ### GlassX
 
@@ -99,7 +130,7 @@ export default function Home() {
 
 **GlassX is still under development, you can check this page for updates and new features.**
 
-### Glass Fetch
+### Glass Fetch (GlassFX)
 
 Glass fetch is an http client written as a wrapper around axios. Although axios is simple and easy to use Glass fetch takes axios to an even better level with it's personalization. Axios is easy to use, but glass fx is made for your project.
 
@@ -136,3 +167,9 @@ export const API_URL = "https://api.com/";
 export const APP_NAME = "";
 export const APP_TITLE = "";
 ```
+
+## More
+
+There are additional readme files in sub directories which give you information about the items in that sub directory.
+
+You can go through those files for more info about the items in there.
