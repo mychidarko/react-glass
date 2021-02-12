@@ -12,9 +12,9 @@ const routes = [
 	},
 ];
 
-const router = new GlassRouter({ routes });
+GlassRouter.options({ routes });
 
-router.beforeEach((to, from, next) => {
+GlassRouter.beforeEach((to, from, next) => {
 	const { middleware } = to.meta;
 
 	if (!middleware) return next();
@@ -27,5 +27,3 @@ router.beforeEach((to, from, next) => {
 		...context,
 	});
 });
-
-export default router;

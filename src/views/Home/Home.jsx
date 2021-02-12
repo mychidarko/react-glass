@@ -1,18 +1,22 @@
 import { useGlobal } from "reactn";
-import router from "../../routes";
+import GlassRouter from "../../utils/glass/router";
 import { useTitle } from "../../utils/hooks";
 
 export default function Home() {
+  // This changes the title in the title bar
   useTitle("Home");
 
+  // using reactn global state (set with glassX)
   const [initial, setInitial] = useGlobal('initial');
 
   setTimeout(() => {
+    // using setInitial to change the state
     setInitial("hobies");
   }, 6000);
 
   setTimeout(() => {
-    return router.push({ name: "login" });
+    // This will redirect us to the login screen
+    return GlassRouter.push({ name: "login" });
   }, 10000);
 
   return (

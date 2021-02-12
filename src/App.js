@@ -1,7 +1,8 @@
-import router from "./routes";
+import GlassRouter from "./utils/glass/router";
 import { ErrorBoundary } from "./utils";
 
 import "./store";
+import "./routes";
 
 const App = () => (
   <ErrorBoundary>
@@ -9,6 +10,6 @@ const App = () => (
   </ErrorBoundary>
 );
 
-const Routes = () => router.render();
+const Routes = () => GlassRouter.render();
 
 export default App;

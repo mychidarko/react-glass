@@ -1,11 +1,11 @@
-import { Router, HashRouter, Route, Switch } from "react-router-dom";
-import ScrollTo from "../ScrollTo";
+import { Router as Base, HashRouter, Route, Switch } from "react-router-dom";
+import ScrollTo from "../../ScrollTo";
 import { createBrowserHistory } from "history";
 
 /**
  * Easy peasy routing for react. Based on vue router.
  */
-export default class GlassRouter {
+export default class Router {
     _defaultOptions = {
         routes: [],
         mode: "history",
@@ -16,6 +16,7 @@ export default class GlassRouter {
         keyLength: 6,
         linkActiveClass: "router-link-active",
         linkExactActiveClass: "router-link-exact-active",
+        instance: null,
         scrollBehavior: (savedPosition) => {
             const {x, y} = savedPosition;
             ScrollTo(x, y);
@@ -28,7 +29,11 @@ export default class GlassRouter {
 
     history = null;
 
-    constructor(options) {
+    constructor(options = {}) {
+        this.options(options);
+    }
+
+    options(options) {
         if (Array.isArray(options)) {
             options = { routes: options };
         }
@@ -95,9 +100,9 @@ export default class GlassRouter {
                 {children}
             </HashRouter>
         ) : (
-            <Router history={this.history} {...routerProps}>
+            <Base history={this.history} {...routerProps}>
                 {children}
-            </Router>
+            </Base>
         );
     }
 
