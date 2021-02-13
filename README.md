@@ -10,9 +10,9 @@ Although react docs say you can arrange your project in any way that feels conve
 
 ### Glass Router (GlassRX)
 
-Glass router is a wrapper around `react-router-dom` which provides a clean and developer friendly syntax and usage for your apps.
+**Glass router has been published as an independent package. You can check it out [here](https://github.com/darko-mychi/glass-router)**
 
-**Glass router is still being developed and so supports only the main react router features.**
+Glass router is a wrapper around `react-router-dom` which provides a clean and developer friendly syntax and usage for your apps.
 
 Glass router is initialized in `src/routes.js`. That's where you need to import your routes. Each view has a routes file in which all routes relating to that view are defined. This file is then imported in the main routes file.
 
@@ -54,20 +54,20 @@ Route with `render` instead of `component`.
 
 #### Routing with glass router
 
-The initialized router is exported from `routes.js` in the src directory. All routing operations can be performed on the router variable no matter the component type you're using.
+All routing operations can be performed on the glassrouter object no matter the component type you're using.
 
 Just as said above, the Glass Router (GlassRX) uses a syntax fairly the same as vue-router's syntax. As such, you can simply import the router object and call the `push` method.
 
 ```js
-import router from "../../routes";
+import GlassRouter from "glass-router";
 
-return router.push("/auth/login");
+return GlassRouter.push("/auth/login");
 ```
 
 Just like vue-router, you can navigate to a route by passing an object instead like this:
 
 ```js
-return router.push({ name: "login" });
+return GlassRouter.push({ name: "login" });
 ```
 
 The name here is the name given to the route when the route was defined:
@@ -83,7 +83,21 @@ The name here is the name given to the route when the route was defined:
 
 Routing with the route name is a good practice, as it prevents repition and easily allows you to change the route path and not break your app in any way.
 
-**More features like middleware are still being developed. Check this page for updates.**
+GlassRX also provides a simple way to route when using JSX, just as done with `react-router`
+
+```js
+import { Link } from "glass-router";
+
+<Link to="/home">Homepage</Link>
+```
+
+Unlike the base `react-router` link, you can also use named routes here:
+
+```js
+<Link to={{ name: "home" }}>Homepage</Link>
+```
+
+**Check out the glassRX repo for updates.**
 
 ### GlassX
 
