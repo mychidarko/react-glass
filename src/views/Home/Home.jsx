@@ -14,10 +14,14 @@ export default function Home() {
     setInitial("hobies");
   }, 6000);
 
-  setTimeout(() => {
-    // This will redirect us to the login screen
-    return GlassRouter.push({ name: "login" });
-  }, 10000);
+  const routeToNext = () => {
+    return GlassRouter.push({
+      name: "login",
+      state: {
+        routeFrom: "home",
+      },
+    });
+  }
 
   return (
     <div className="flex flex:center-all" style={{ height: "100vh" }}>
@@ -29,9 +33,10 @@ export default function Home() {
           overblown libraries like redux and unfriendly interfaces like react-router-dom.
           With React Glass, the simpler, the better.
         </p>
-        <p className="mt:_2">
+        <p className="mt:_2 mb:_2">
           This will change to hobbies in 5 seconds 👉 {initial}
         </p>
+        <button onClick={routeToNext}>Go to login page</button>
       </div>
     </div>
   );
