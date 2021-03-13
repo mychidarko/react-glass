@@ -129,7 +129,7 @@ Example read and update state:
 
 ```js
 import { useGlobal } from "reactn";
-import { useTitle } from "../../utils/hooks";
+import { useTitle } from "@/utils/hooks";
 
 export default function Home() {
   useTitle("Home");

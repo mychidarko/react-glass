@@ -1,6 +1,6 @@
 import axios from "axios";
 
-import { API_URL } from "../../config/constants";
+import { API_URL } from "@/config/constants";
 import { hasAuth, getToken, save } from "../User";
 
 const GlassErrors = {

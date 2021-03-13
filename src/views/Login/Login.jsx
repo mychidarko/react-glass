@@ -1,5 +1,5 @@
 import { Link } from "glass-router";
-import { useTitle } from "../../utils/hooks";
+import { useTitle } from "@/utils/hooks";
 
 export default function Login(props) {
 	useTitle("Login");

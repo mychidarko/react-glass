@@ -23,6 +23,8 @@ GlassRouter.beforeEach((to, from, next) => {
 		to, from, next,
 	};
 
+	console.log(context);
+
 	return middleware[0]({
 		...context,
 	});

@@ -1,6 +1,6 @@
 import { useGlobal } from "reactn";
 import GlassRouter from "glass-router";
-import { useTitle } from "../../utils/hooks";
+import { useTitle } from "@/utils/hooks";
 
 export default function Home() {
   // This changes the title in the title bar
