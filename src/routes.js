@@ -1,5 +1,4 @@
-import GlassRouter from "glass-router";
-
+import { GlassRouter } from "glass-router";
 import home from "./views/Home/routes";
 import login from "./views/Login/routes";
 
@@ -12,20 +11,7 @@ const routes = [
 	},
 ];
 
-GlassRouter.options({ routes });
-
-GlassRouter.beforeEach((to, from, next) => {
-	const { middleware } = to.meta;
-
-	if (!middleware) return next();
-
-	const context = {
-		to, from, next,
-	};
-
-	console.log(context);
-
-	return middleware[0]({
-		...context,
-	});
+GlassRouter.options({
+	routes,
+	middleware: true,
 });

@@ -1,4 +1,4 @@
-import GlassRouter from "glass-router";
+import { GlassRouter } from "glass-router";
 import { ErrorBoundary } from "./utils";
 
 import "./store";
