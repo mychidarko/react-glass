@@ -1,6 +1,6 @@
 # React Glass
 
-React Glass is a simple react js boilerplate which focuses on providing a simple and pain-free developer experience.
+React Glass is a simple react js boilerplate which focuses on providing a simple and pain-free developer experience. If you're a fan of TypeScript, check out [React Glass TS](https://github.com/darko-mychi/react-glass-ts)
 
 ## Features
 
@@ -142,45 +142,7 @@ export default function Home() {
   ...
 ```
 
-**GlassX is still under development, you can check this page for updates and new features.**
-
-### Glass Fetch (GlassFX)
-
-Glass fetch is an http client written as a wrapper around axios. Although axios is simple and easy to use Glass fetch takes axios to an even better level with it's personalization. Axios is easy to use, but glass fx is made for your project.
-
-Axios vs GlassFX
-
-```js
-// axios
-axios.get("BASEURL/movies").then(...)...
-
-// GlassFX
-$get("movies").then(...)...
-```
-
-After login:
-
-```js
-// axios
-const headers = {
-    Authorization: `Bearer ${TOKEN}`,
-};
-
-axios.get("BASEURL/user/me", headers).then(...)...
-
-// GlassFX
-$get("user/me").then(...)...
-```
-
-All you need to do to get started with GlassFetch is configure your base URL and your token save string in `src/config/constants.js`
-
-```js
-export const TOKEN_STORAGE_KEY = "token";
-export const USER_STORAGE_KEY = "user";
-export const API_URL = "https://api.com/";
-export const APP_NAME = "";
-export const APP_TITLE = "";
-```
+**Checkout GlassX from [it's repo](https://github.com/darko-mychi/glassx).**
 
 ## More
 
